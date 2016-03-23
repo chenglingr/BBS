@@ -12,8 +12,8 @@ namespace BBS.Web.BBSUsers
 {
     public partial class List : Page
     {
-        
-        
+
+      
         
 		BBS.BLL.BBSUsers bll = new BBS.BLL.BBSUsers();
 

@@ -420,6 +420,10 @@
       <Project>{72e65735-e6dd-40e6-ae96-159c276a69ed}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{b27e94f4-13c5-47d4-9aa2-4c9780c39d43}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
