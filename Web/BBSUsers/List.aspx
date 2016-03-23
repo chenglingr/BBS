@@ -72,5 +72,4 @@
                 </tr>
             </table>
 </asp:Content>
-<%--<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceCheckright" runat="server">
-</asp:Content>--%>
+

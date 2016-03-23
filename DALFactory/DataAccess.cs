@@ -113,6 +113,14 @@ namespace BBS.DALFactory
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (BBS.IDAL.IBBSUsers)objType;
 		}
+        /*
+        public static BBS.IDAL.IBBSUsers CreateBBSUsers()
+        {
 
-}
+            string ClassNamespace = AssemblyPath + ".BBSUsers";
+            object objType = CreateObject(AssemblyPath, ClassNamespace);
+            return (BBS.IDAL.IBBSUsers)objType;
+        }
+        */
+    }
 }
