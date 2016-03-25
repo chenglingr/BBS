@@ -15,7 +15,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link href="Content/bootstrap.min.css"  rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -102,9 +102,9 @@
             </div>
           </div>
         </div>
+        <br />
         <div class="container body-content">
            
-
             <div class="row">
               <div class="col-md-4">
                    <asp:ContentPlaceHolder ID="MenuContent" runat="server">
