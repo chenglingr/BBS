@@ -168,6 +168,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="说明+data\BBS.sql" />
+    <Content Include="说明+data\项目要求.txt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Index1.aspx" />
     <Content Include="Index.aspx" />
@@ -221,6 +223,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="说明+data\BBS论坛数据库设计开发.doc" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
