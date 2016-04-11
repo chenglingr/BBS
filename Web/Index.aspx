@@ -59,4 +59,5 @@
         </div>
       </li>
     </ul>
+    <%@ include file="nav.html"%>
 </asp:Content>
