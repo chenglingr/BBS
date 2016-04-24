@@ -133,6 +133,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="WEB\ashx\" />
+    <Folder Include="WEB\jq\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -167,6 +169,74 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="WEB\ArticleList.html" />
+    <Content Include="WEB\Category.html" />
+    <Content Include="WEB\CategoryContent.html" />
+    <Content Include="WEB\ContentComment.html" />
+    <Content Include="WEB\ContentSimple.html" />
+    <Content Include="WEB\css\bootstrap.css" />
+    <Content Include="WEB\css\main.css" />
+    <Content Include="WEB\css\responsive.css" />
+    <Content Include="WEB\Hot.html" />
+    <Content Include="WEB\images\calendar-icon.png" />
+    <Content Include="WEB\images\category-icon.png" />
+    <Content Include="WEB\images\category-main-icon.png" />
+    <Content Include="WEB\images\comment.png" />
+    <Content Include="WEB\images\devine-art.png" />
+    <Content Include="WEB\images\facebook.png" />
+    <Content Include="WEB\images\faq-minus.png" />
+    <Content Include="WEB\images\faq-plus.png" />
+    <Content Include="WEB\images\favicon.png" />
+    <Content Include="WEB\images\flickr.png" />
+    <Content Include="WEB\images\footer-bg.png" />
+    <Content Include="WEB\images\glyphicons-halflings-white.png" />
+    <Content Include="WEB\images\glyphicons-halflings.png" />
+    <Content Include="WEB\images\google.png" />
+    <Content Include="WEB\images\image-large.png" />
+    <Content Include="WEB\images\image.png" />
+    <Content Include="WEB\images\li-arrow.png" />
+    <Content Include="WEB\images\like-btn.png" />
+    <Content Include="WEB\images\like.png" />
+    <Content Include="WEB\images\linked-in.png" />
+    <Content Include="WEB\images\loading.gif" />
+    <Content Include="WEB\images\logo.png" />
+    <Content Include="WEB\images\main-bg.jpg" />
+    <Content Include="WEB\images\plus-minus.png" />
+    <Content Include="WEB\images\question-large.png" />
+    <Content Include="WEB\images\question.png" />
+    <Content Include="WEB\images\quote.png" />
+    <Content Include="WEB\images\rss.png" />
+    <Content Include="WEB\images\scroll-top.png" />
+    <Content Include="WEB\images\search-loader.gif" />
+    <Content Include="WEB\images\skype.png" />
+    <Content Include="WEB\images\standard-large.png" />
+    <Content Include="WEB\images\standard.png" />
+    <Content Include="WEB\images\stumble.png" />
+    <Content Include="WEB\images\support.png" />
+    <Content Include="WEB\images\temp\living-room-770x501.jpg" />
+    <Content Include="WEB\images\temp\man.png" />
+    <Content Include="WEB\images\twitter.png" />
+    <Content Include="WEB\images\user.png" />
+    <Content Include="WEB\images\video-large.png" />
+    <Content Include="WEB\images\video.png" />
+    <Content Include="WEB\index.html" />
+    <Content Include="WEB\js\custom.js" />
+    <Content Include="WEB\js\custom5152.js" />
+    <Content Include="WEB\js\jflickrfeed.js" />
+    <Content Include="WEB\js\jquery-1.8.3.min.js" />
+    <Content Include="WEB\js\jquery.easing.1.3.js" />
+    <Content Include="WEB\js\jquery.easing.1.34e44.js" />
+    <Content Include="WEB\js\jquery.form.js" />
+    <Content Include="WEB\js\jquery.formd471.js" />
+    <Content Include="WEB\js\jquery.liveSearch.js" />
+    <Content Include="WEB\js\jquery.liveSearchd5f7.js" />
+    <Content Include="WEB\js\jquery.validate.min.js" />
+    <Content Include="WEB\js\jquery.validate.minfc6b.js" />
+    <Content Include="WEB\js\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="WEB\js\prettyphoto\jquery.prettyPhotoaeb9.js" />
+    <Content Include="WEB\js\prettyphoto\prettyPhotoaeb9.css" />
+    <Content Include="WEB\LinkME.html" />
+    <Content Include="WEB\LinkMEContent.html" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Nav.html" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
@@ -217,6 +287,8 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WEB\images\Descr.WD3" />
+    <Content Include="WEB\images\temp\Descr.WD3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />

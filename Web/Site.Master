@@ -106,14 +106,10 @@
         <div class="container body-content">
            
             <div class="row">
-              <div class="col-md-4">
-                   <asp:ContentPlaceHolder ID="MenuContent" runat="server">
-                  </asp:ContentPlaceHolder>
-              </div>
-              <div class="col-md-8"> 
+           
                   <asp:ContentPlaceHolder ID="MainContent" runat="server">
                   </asp:ContentPlaceHolder>
-              </div>
+            
             </div>
             <hr />
             <footer>
