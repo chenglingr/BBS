@@ -12,7 +12,7 @@ namespace BBS.SQLServerDAL
 	public partial class BBSReply:IBBSReply
 	{
 		public BBSReply()
-		{}
+		{ }
 		#region  Method
 
 		/// <summary>
