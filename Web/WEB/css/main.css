@@ -6,7 +6,8 @@ body {
 a:hover {
   text-decoration: none;
 }
-
+ iframe {margin-bottom:-7px;
+ }
 blockquote {
   background: whitesmoke url("../images/quote.png") no-repeat 20px 25px;
   border: 1px solid #e8e8e8;

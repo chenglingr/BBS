@@ -133,8 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="WEB\ashx\" />
-    <Folder Include="WEB\jq\" />
+    <Folder Include="WEB\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -161,6 +160,8 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\pagination.css" />
+    <Content Include="Content\pagination1.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -169,6 +170,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="WEB\ArticleList.html" />
     <Content Include="WEB\Category.html" />
     <Content Include="WEB\CategoryContent.html" />
@@ -220,6 +222,15 @@
     <Content Include="WEB\images\video-large.png" />
     <Content Include="WEB\images\video.png" />
     <Content Include="WEB\index.html" />
+    <Content Include="WEB\jq\add.js" />
+    <Content Include="WEB\jq\addarticle.js" />
+    <Content Include="WEB\jq\ArticleList.js" />
+    <Content Include="WEB\jq\Category.js" />
+    <Content Include="WEB\jq\CategoryContent.js" />
+    <Content Include="WEB\jq\ContentSimple.js" />
+    <Content Include="WEB\jq\index.js" />
+    <Content Include="WEB\jq\login.js" />
+    <Content Include="WEB\jq\nav.js" />
     <Content Include="WEB\js\custom.js" />
     <Content Include="WEB\js\custom5152.js" />
     <Content Include="WEB\js\jflickrfeed.js" />
@@ -237,14 +248,98 @@
     <Content Include="WEB\js\prettyphoto\prettyPhotoaeb9.css" />
     <Content Include="WEB\LinkME.html" />
     <Content Include="WEB\LinkMEContent.html" />
+    <Content Include="WEB\nav.html" />
+    <Content Include="WEB\User\add.html" />
+    <Content Include="WEB\User\addarticle.html" />
+    <Content Include="WEB\User\login.html" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="WEB\User\ueditor\dialogs\formula\formula.css" />
+    <Content Include="WEB\User\ueditor\dialogs\formula\formula.html" />
+    <Content Include="WEB\User\ueditor\dialogs\formula\formula.js" />
+    <Content Include="WEB\User\ueditor\dialogs\formula\images\formula.png" />
+    <Content Include="WEB\User\ueditor\dialogs\image\image.css" />
+    <Content Include="WEB\User\ueditor\dialogs\image\image.js" />
+    <Content Include="WEB\User\ueditor\dialogs\image\images\close.png" />
+    <Content Include="WEB\User\ueditor\dialogs\image\images\upload1.png" />
+    <Content Include="WEB\User\ueditor\dialogs\image\images\upload2.png" />
+    <Content Include="WEB\User\ueditor\dialogs\link\link.js" />
+    <Content Include="WEB\User\ueditor\dialogs\map\map.html" />
+    <Content Include="WEB\User\ueditor\dialogs\map\map.js" />
+    <Content Include="WEB\User\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="WEB\User\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="WEB\User\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="WEB\User\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="WEB\User\ueditor\dialogs\video\video.css" />
+    <Content Include="WEB\User\ueditor\dialogs\video\video.js" />
+    <Content Include="WEB\User\ueditor\index.html" />
+    <Content Include="WEB\User\ueditor\lang\en\en.js" />
+    <Content Include="WEB\User\ueditor\lang\en\images\addimage.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\background.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\button.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\copy.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\imglabel.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\localimage.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\music.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="WEB\User\ueditor\lang\en\images\upload.png" />
+    <Content Include="WEB\User\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="WEB\User\ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="WEB\User\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="WEB\User\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="WEB\User\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="WEB\User\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="WEB\User\ueditor\themes\default\css\umeditor.css" />
+    <Content Include="WEB\User\ueditor\themes\default\css\umeditor.min.css" />
+    <Content Include="WEB\User\ueditor\themes\default\images\caret.png" />
+    <Content Include="WEB\User\ueditor\themes\default\images\close.png" />
+    <Content Include="WEB\User\ueditor\themes\default\images\icons.gif" />
+    <Content Include="WEB\User\ueditor\themes\default\images\icons.png" />
+    <Content Include="WEB\User\ueditor\themes\default\images\ok.gif" />
+    <Content Include="WEB\User\ueditor\themes\default\images\pop-bg.png" />
+    <Content Include="WEB\User\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="WEB\User\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="WEB\User\ueditor\third-party\jquery.min.js" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\Symbola.svg" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\mathquill.css" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\mathquill.js" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\mathquill.min.js" />
+    <Content Include="WEB\User\ueditor\umeditor.config.js" />
+    <Content Include="WEB\User\ueditor\umeditor.js" />
+    <Content Include="WEB\User\ueditor\umeditor.min.js" />
+    <Content Include="说明+data\BBS.sql" />
+    <Content Include="说明+data\项目要求.txt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Nav.html" />
+    <Content Include="Index.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.pagination.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -274,6 +369,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="SupplyAJAX.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -281,16 +377,51 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Scripts\jquery.pagination1.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="说明+data\BBS论坛数据库设计开发.doc" />
+    <Content Include="WEB\ashx\index.ashx" />
     <Content Include="WEB\images\Descr.WD3" />
     <Content Include="WEB\images\temp\Descr.WD3" />
+    <Content Include="WEB\ashx\login.ashx" />
+    <Content Include="WEB\ashx\add.ashx" />
+    <Content Include="WEB\ashx\addarticle.ashx" />
+    <Content Include="WEB\ashx\exit.ashx" />
+    <Content Include="WEB\ashx\nav.ashx" />
+    <Content Include="WEB\ashx\Category.ashx" />
+    <Content Include="WEB\ashx\CategoryContent.ashx" />
+    <Content Include="WEB\ashx\ArticleList.ashx" />
+    <Content Include="WEB\ashx\getNum.ashx" />
+    <Content Include="WEB\ashx\ContentSimple.ashx" />
+    <Content Include="WEB\User\ueditor\net\getContent.ashx" />
+    <Content Include="WEB\User\ueditor\net\imageUp.ashx" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\Symbola.eot" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\Symbola.otf" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\Symbola.ttf" />
+    <Content Include="WEB\User\ueditor\third-party\mathquill\font\Symbola.woff" />
+    <Content Include="说明+data\7、表格-分页显示数据页 - 服务器端分页.doc" />
+    <Content Include="说明+data\前台-服务器端分页显示.doc" />
+    <Content Include="说明+data\分页文件.rar" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\DataConvertJson.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -457,6 +588,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -472,6 +610,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="SupplyAJAX.aspx.cs">
+      <DependentUpon>SupplyAJAX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyAJAX.aspx.designer.cs">
+      <DependentUpon>SupplyAJAX.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -479,6 +624,40 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WEB\ashx\add.ashx.cs">
+      <DependentUpon>add.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\addarticle.ashx.cs">
+      <DependentUpon>addarticle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\ArticleList.ashx.cs">
+      <DependentUpon>ArticleList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\Category.ashx.cs">
+      <DependentUpon>Category.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\CategoryContent.ashx.cs">
+      <DependentUpon>CategoryContent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\ContentSimple.ashx.cs">
+      <DependentUpon>ContentSimple.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\exit.ashx.cs">
+      <DependentUpon>exit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\getNum.ashx.cs">
+      <DependentUpon>getNum.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\index.ashx.cs">
+      <DependentUpon>index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\nav.ashx.cs">
+      <DependentUpon>nav.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\User\ueditor\net\Uploader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

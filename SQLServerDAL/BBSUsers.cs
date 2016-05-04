@@ -13,12 +13,31 @@ namespace BBS.SQLServerDAL
 	{
 		public BBSUsers()
 		{}
-		#region  Method
+        public int Login(string name, string pwd)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 uid ");
+            strSql.Append(" from BBSUsers ");
+            strSql.Append(" where Uname='" + name + "' and UPassword='" + pwd + "'");
 
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+
+
+        }
+        #region  Method
+
+        /// <summary>
+        /// 得到最大ID
+        /// </summary>
+        public int GetMaxId()
 		{
 		return DbHelperSQL.GetMaxID("Uid", "BBSUsers"); 
 		}

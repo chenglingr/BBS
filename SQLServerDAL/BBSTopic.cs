@@ -267,11 +267,11 @@ namespace BBS.SQLServerDAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select tid,tsid,tuid,treplycount,TTopic,TContents,TTime,TClickCount,TLastClickT ");
-			strSql.Append(" FROM BBSTopic ");
+			strSql.Append("select tid,tsid,tuid,treplycount,TTopic,TContents,TTime,TClickCount,TLastClickT,SName,Uname ");
+			strSql.Append(" FROM BBSTopic,bbssection,BBSUsers where BBSTopic.tsid=bbssection.sid and BBSTopic.tuid= BBSUsers.uid");
 			if(strWhere.Trim()!="")
 			{
-				strSql.Append(" where "+strWhere);
+				strSql.Append(" and "+strWhere);
 			}
 			return DbHelperSQL.Query(strSql.ToString());
 		}
@@ -287,13 +287,14 @@ namespace BBS.SQLServerDAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" tid,tsid,tuid,treplycount,TTopic,TContents,TTime,TClickCount,TLastClickT ");
-			strSql.Append(" FROM BBSTopic ");
-			if(strWhere.Trim()!="")
+			strSql.Append(" tid,tsid,tuid,treplycount,TTopic,TContents,TTime,TClickCount,TLastClickT,SName,Uname ");
+			strSql.Append(" FROM BBSTopic,bbssection,BBSUsers  where BBSTopic.tsid=bbssection.sid and BBSTopic.tuid= BBSUsers.uid");
+           
+            if (strWhere.Trim()!="")
 			{
-				strSql.Append(" where "+strWhere);
+				strSql.Append(" and "+strWhere);
 			}
-			strSql.Append(" order by " + filedOrder);
+			strSql.Append(" order by " + filedOrder+" desc");
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
@@ -324,7 +325,7 @@ namespace BBS.SQLServerDAL
 		public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("SELECT * FROM ( ");
+			strSql.Append("SELECT tid,tsid,tuid,treplycount,TTopic,TContents100=SUBSTRING(TContents,0,150),TTime,TClickCount,TLastClickT FROM ( ");
 			strSql.Append(" SELECT ROW_NUMBER() OVER (");
 			if (!string.IsNullOrEmpty(orderby.Trim()))
 			{
@@ -348,9 +349,7 @@ namespace BBS.SQLServerDAL
 		*/
 
 		#endregion  Method
-		#region  MethodEx
-
-		#endregion  MethodEx
+		
 	}
 }
 

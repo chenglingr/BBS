@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - 我的 ASP.NET 应用程序</title>
 
-    <asp:PlaceHolder runat="server">
+    <asp:PlaceHolder runat="server" >
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
+  
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Content/bootstrap.min.css"  rel="stylesheet" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
     <form runat="server">
