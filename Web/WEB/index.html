@@ -24,13 +24,23 @@
                 <!--[if lt IE 9]>
                 <script src="js/html5.js"></script>
                 <![endif]-->
-           
+            <script type="text/javascript" language="javascript">
+
+function iFrameHeight() {
+var ifm= document.getElementById("iframepage");
+var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+if(ifm != null && subWeb != null) {
+   ifm.height = subWeb.body.scrollHeight;
+   ifm.width = subWeb.body.scrollWidth;
+}
+}
+            </script>
         </head>
 
         <body>
 
                 <!-- Start of Header -->
-            <iframe src="nav.html" height="60" frameborder="0" width="100%" scrolling="no"></iframe>
+            <iframe src="nav.html" height="60" frameborder="0" width="100%" scrolling="no" z-index="99" id="iframepage" onLoad="iFrameHeight()"></iframe>
                 <!-- End of Header -->
 
                 <!-- Start of Search Wrapper -->
