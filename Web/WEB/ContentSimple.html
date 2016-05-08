@@ -18,7 +18,10 @@
                 <link rel='stylesheet' id='responsive-css-css'  href='css/responsive.css?ver=1.0' type='text/css' media='all' />
                 <link rel='stylesheet' id='pretty-photo-css-css'  href='js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
                 <link rel='stylesheet' id='main-css-css'  href='css/main.css?ver=1.0' type='text/css' media='all' />
-            <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
+            <script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+            <script src="../Scripts/jquery.pagination1.js" type="text/javascript"></script>
+
+            <link rel='stylesheet' href="../Content/pagination.css" type='text/css' />
             <script src="jq/ContentSimple.js" type="text/javascript"></script>
                 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
                 <!--[if lt IE 9]>
@@ -61,56 +64,48 @@
 
                                                         <hr>
                                                         <div id="content"></div>
-
-                                                        
-
-                                                        <blockquote>
-                                                                <p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p>
-                                                        </blockquote>
-
-                                                        <p>As a new WordPress user, you should go to <a href="#">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
-
+                                                                                                            
                                                 </article>
-
+                                            <hr />
+                                            <div>
+                                                <h3 id="comments-title"><input class="btn" type="button" id="getComment" value="加载评论"></h3>
+                                               <div id="Result">
+                                                   
+                                               </div>
+                                               <div id="Pagination" class="pagination"></div> 
+                                            </div>
+                                            <br />
+                                            <hr />
                                                 <div id="respond">
 
-                                                        <h3>Leave a Reply</h3>
+                                                        <h3>发表评论</h3>
 
                                                         <div class="cancel-comment-reply">
                                                                 <a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">Click here to cancel reply.</a>
                                                         </div>
 
 
-                                                        <form action="#" method="post" id="commentform">
+                                                        <form  id="commentform">
 
 
-                                                                <p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
-
+                                                                <p class="comment-notes">登录后才能评论；评论时，请文明用语 <span class="required">*</span></p>
+                                                                                                                          
                                                                 <div>
-                                                                        <label for="author">Name *</label>
-                                                                        <input class="span4" type="text" name="author" id="author" value="" size="22">
-                                                                </div>
-
-                                                                <div>
-                                                                        <label for="email">Email *</label>
-                                                                        <input class="span4" type="text" name="email" id="email" value="" size="22">
-                                                                </div>
-
-                                                                <div>
-                                                                        <label for="url">Website</label>
-                                                                        <input class="span4" type="text" name="url" id="url" value="" size="22">
+                                                                        <label for="text">标题</label>
+                                                                        <input class="span4" type="text"  id="title1" value="无标题" size="22" />
+                                                                   
                                                                 </div>
 
 
                                                                 <div>
-                                                                        <label for="comment">Comment</label>
+                                                                        <label for="comment">内容</label>
                                                                         <textarea class="span8" name="comment" id="comment" cols="58" rows="10"></textarea>
                                                                 </div>
 
-                                                                <p class="allowed-tags">You can use these HTML tags and attributes <small><code>&lt;a href="#" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>
+                                                                <p class="allowed-tags">内容不可为空<span style="color:red" id="showADD"></span></p>
 
                                                                 <div>
-                                                                        <input class="btn" name="submit" type="submit" id="submit" value="Submit Comment">
+                                                                        <input class="btn" name="submit" type="button" id="submitComment" value="提交评论" />
                                                                 </div>
 
                                                         </form>
@@ -207,6 +202,7 @@
                         <!-- end of #footer -->
 
                         <!-- Footer Bottom -->
+            <footer>
                         <div id="footer-bottom-wrapper">
                                 <div id="footer-bottom" class="container">
                                         <div class="row">

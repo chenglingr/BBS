@@ -8,7 +8,7 @@ namespace Web.WEB.ashx
     /// <summary>
     /// Summary description for CategoryContent
     /// </summary>
-    public class CategoryContent : IHttpHandler
+    public class CategoryContent : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)

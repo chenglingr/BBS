@@ -419,9 +419,13 @@
     <Content Include="说明+data\7、表格-分页显示数据页 - 服务器端分页.doc" />
     <Content Include="说明+data\前台-服务器端分页显示.doc" />
     <Content Include="说明+data\分页文件.rar" />
+    <Content Include="WEB\ashx\AddComment.ashx" />
+    <Content Include="WEB\ashx\getCommentNum.ashx" />
+    <Content Include="WEB\ashx\CommentList.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\DataConvertJson.cs" />
+    <Content Include="App_Code\StringBuffer.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -630,6 +634,9 @@
     <Compile Include="WEB\ashx\addarticle.ashx.cs">
       <DependentUpon>addarticle.ashx</DependentUpon>
     </Compile>
+    <Compile Include="WEB\ashx\AddComment.ashx.cs">
+      <DependentUpon>AddComment.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WEB\ashx\ArticleList.ashx.cs">
       <DependentUpon>ArticleList.ashx</DependentUpon>
     </Compile>
@@ -639,11 +646,17 @@
     <Compile Include="WEB\ashx\CategoryContent.ashx.cs">
       <DependentUpon>CategoryContent.ashx</DependentUpon>
     </Compile>
+    <Compile Include="WEB\ashx\CommentList.ashx.cs">
+      <DependentUpon>CommentList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WEB\ashx\ContentSimple.ashx.cs">
       <DependentUpon>ContentSimple.ashx</DependentUpon>
     </Compile>
     <Compile Include="WEB\ashx\exit.ashx.cs">
       <DependentUpon>exit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\getCommentNum.ashx.cs">
+      <DependentUpon>getCommentNum.ashx</DependentUpon>
     </Compile>
     <Compile Include="WEB\ashx\getNum.ashx.cs">
       <DependentUpon>getNum.ashx</DependentUpon>
@@ -657,7 +670,7 @@
     <Compile Include="WEB\ashx\nav.ashx.cs">
       <DependentUpon>nav.ashx</DependentUpon>
     </Compile>
-    <Compile Include="WEB\User\ueditor\net\Uploader.cs" />
+    <Content Include="WEB\User\ueditor\net\Uploader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Web;
 using System.Data;
-
 namespace Web.WEB.ashx
 {
     /// <summary>
-    /// Summary description for ArticleList
+    /// Summary description for CommentList
     /// </summary>
-    public class ArticleList : IHttpHandler, System.Web.SessionState.IRequiresSessionState
+    public class CommentList : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -33,14 +31,6 @@ namespace Web.WEB.ashx
                 }
             }
         }
-        public string BindSource(int pagesize, int page,string sqlwhere)
-        {
-            BBS.BLL.BBSTopic bll = new BBS.BLL.BBSTopic();
-            //获取分页数据
-            DataSet ds = bll.GetListByPage(sqlwhere, "", pagesize * page + 1, pagesize * (page + 1));  //获取数据源的ds会吧。
-            ds.Tables[0].TableName = "List";
-            return Web.DataConvertJson.DataTable2Json(ds.Tables[0]);
-        }
 
         public bool IsReusable
         {
@@ -48,6 +38,14 @@ namespace Web.WEB.ashx
             {
                 return false;
             }
+        }
+        public string BindSource(int pagesize, int page, string sqlwhere)
+        {
+            BBS.BLL.BBSReply bll = new BBS.BLL.BBSReply();
+            //获取分页数据
+            DataSet ds = bll.GetListByPage(sqlwhere, "", pagesize * page + 1, pagesize * (page + 1));  //获取数据源的ds会吧。
+            ds.Tables[0].TableName = "List";
+            return Web.DataConvertJson.DataTable2Json(ds.Tables[0]);
         }
     }
 }

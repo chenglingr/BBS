@@ -8,7 +8,7 @@ using System.Collections;
 /// <summary>
 /// UEditor编辑器通用上传类
 /// </summary>
-public class Uploader
+public class Uploader1
 {
     string state = "SUCCESS";
 

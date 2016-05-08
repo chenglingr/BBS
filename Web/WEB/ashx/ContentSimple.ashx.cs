@@ -9,7 +9,7 @@ namespace Web.WEB.ashx
     /// <summary>
     /// Summary description for ContentSimple
     /// </summary>
-    public class ContentSimple : IHttpHandler
+    public class ContentSimple : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)

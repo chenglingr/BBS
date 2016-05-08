@@ -5,6 +5,7 @@ using System.Web;
 using System.Text;
 using System.Data;
 using System.Web.Script.Serialization;//添加本引用。
+
 namespace Web
 {
 
@@ -37,7 +38,8 @@ namespace Web
             {
                 string name = item.Name;
                 object value = item.GetValue(o, null);
-                string s = (value.ToString()).Replace("\\", "\\\\"); //斜杠
+                //  string s = (value.ToString()).Replace("\\", "\\\\"); //斜杠
+                string s = (value.ToString()).Replace("\\", "\\\\").Replace("\'", "\\\'").Replace("\t", " ").Replace("\r", " ").Replace("\n", "<br/>").Replace("\"", "'");
                 Json.Append("\"" + name + "\":\"" + s + "\"");
                 Json.Append(",");
             }
@@ -69,7 +71,8 @@ namespace Web
                     jsonBuilder.Append("\"");
                     jsonBuilder.Append(dt.Columns[j].ColumnName);
                     jsonBuilder.Append("\":\"");
-                    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\\", "\\\\"));
+                    //    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\\", "\\\\")); 特殊字符
+                    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\\", "\\\\").Replace("\'", "\\\'").Replace("\t", " ").Replace("\r", " ").Replace("\n", "<br/>").Replace("\"", "'"));
                     jsonBuilder.Append("\",");
                 }
                 jsonBuilder.Remove(jsonBuilder.Length - 1, 1);
@@ -144,5 +147,6 @@ namespace Web
             Json.Append("]}");
             return Json.ToString();
         }
+       
     }
 }
