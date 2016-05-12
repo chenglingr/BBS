@@ -41,21 +41,16 @@ $(function () {
                      //移除Id为Result的表格里的行，从第二行开始（这里根据页面布局不同页变）   
                 $.each(data.List, function (index, item) {//显示数据1
                    //  tid,tsid,tuid,treplycount,TTopic,TContents100=SUBSTRING(TContents,0,100),TTime,TClickCount,TLastClickT
-                 var str='<article class="format-standard type-post hentry clearfix">\
-                                                       <header class="clearfix">\
-                                                               <h3 class="post-title">\
-                                                                       <a href="ContentSimple.html?ID=' + item.tid + '">' + item.TTopic + '</a>\
-                                                               </h3>\
-                                                               <div class="post-meta clearfix">\
-                                                                       <span class="date">创建时间：' + item.TTime + '</span>\
-                                                                       <span class="category"><a href="ArticleList.html?ID=' + item.tsid + '">本版帖子</a></span>\
-                                                                       <span class="comments"><a href="ArticleList.html?UID=' + item.tuid + '">作者其他帖子</a></span>\
-                                                                        <span class="comments">' + item.treplycount + ' 评论</span>\
-                                                                       <span class="like-count">' + item.TClickCount + '</span>\
-                                                               </div>\
-                                                       </header>\
-                                                       <div>' + item.TContents100 + ' . . . <a class="readmore-link" href="ContentSimple.html?ID=' + item.tid + '">Read more</a></div>\
-                                               </article>';
+                 var str='<div">\
+                                <h3> <a href="ContentSimple.html?ID=' + item.tid + '">' + item.TTopic + '</a></h3>\
+                                <div >\
+                                     <span">创建时间：' + item.TTime + '</span>\
+                                     <span"><a href="ArticleList.html?ID=' + item.tsid + '">本版帖子</a></span>\
+                                     <span><a href="ArticleList.html?UID=' + item.tuid + '">作者其他帖子</a></span>\
+                                     <span>' + item.treplycount + ' 评论</span>\
+                                     <span>' + item.TClickCount + '</span>\
+                               </div>\
+                               <div>' + item.TContents100 + '...<br/> <a class="readmore-link" href="ContentSimple.html?ID=' + item.tid + '">Read more</a></div></div>';
                  $("#Result").append(str);
 
                 });
