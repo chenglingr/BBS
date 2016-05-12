@@ -133,7 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="WEB\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -170,7 +169,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Scripts\bootstrap-table.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="WEB\Admin\UserList.html" />
     <Content Include="WEB\ArticleList.html" />
     <Content Include="WEB\Category.html" />
     <Content Include="WEB\CategoryContent.html" />
@@ -224,6 +226,7 @@
     <Content Include="WEB\index.html" />
     <Content Include="WEB\jq\add.js" />
     <Content Include="WEB\jq\addarticle.js" />
+    <Content Include="WEB\jq\ArticleList1.js" />
     <Content Include="WEB\jq\ArticleList.js" />
     <Content Include="WEB\jq\Category.js" />
     <Content Include="WEB\jq\CategoryContent.js" />
@@ -231,6 +234,7 @@
     <Content Include="WEB\jq\index.js" />
     <Content Include="WEB\jq\login.js" />
     <Content Include="WEB\jq\nav.js" />
+    <Content Include="WEB\jq\UserList.js" />
     <Content Include="WEB\js\custom.js" />
     <Content Include="WEB\js\custom5152.js" />
     <Content Include="WEB\js\jflickrfeed.js" />
@@ -422,9 +426,17 @@
     <Content Include="WEB\ashx\AddComment.ashx" />
     <Content Include="WEB\ashx\getCommentNum.ashx" />
     <Content Include="WEB\ashx\CommentList.ashx" />
+    <Content Include="WEB\ashx\UserList.ashx" />
+    <Content Include="WEB\ashx\delUser.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\DataConvertJson.cs" />
+    <Compile Include="WEB\ashx\delUser.ashx.cs">
+      <DependentUpon>delUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\UserList.ashx.cs">
+      <DependentUpon>UserList.ashx</DependentUpon>
+    </Compile>
     <Content Include="App_Code\StringBuffer.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
