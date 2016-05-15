@@ -49,6 +49,7 @@ namespace Web.WEB.ashx
                 {
                     json = "{'info':'增加数据成功,编号是：" + n + "'}";
                     context.Session["ID"] = n;
+                    context.Session["Name"] = uname;
                 }
             }
           

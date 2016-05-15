@@ -67,7 +67,7 @@ namespace Web.WEB.ashx
                 //返回单个文字信息
                 if (n > 0)
                 {
-                    json = "{\"info\":\"增加数据成功\"}";
+                    json = "{\"info\":\"增加数据成功\",\"UID\":\""+ tuid + "\"}";
                  
                 }
             }

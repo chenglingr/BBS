@@ -192,7 +192,9 @@ namespace BBS.SQLServerDAL
 			strSql.Append(" where SID="+SID+"" );
 			BBS.Model.BBSSection model=new BBS.Model.BBSSection();
 			DataSet ds=DbHelperSQL.Query(strSql.ToString());
-			if(ds.Tables[0].Rows.Count>0)
+   
+
+            if (ds.Tables[0].Rows.Count>0)
 			{
 				return DataRowToModel(ds.Tables[0].Rows[0]);
 			}

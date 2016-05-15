@@ -157,6 +157,7 @@
     <Content Include="BBSUsers\Modify.aspx" />
     <Content Include="BBSUsers\Show.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-table.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\pagination.css" />
@@ -172,6 +173,8 @@
     <Content Include="Scripts\bootstrap-table-zh-CN.min.js" />
     <Content Include="Scripts\bootstrap-table.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="WEB\Admin\ARList.html" />
+    <Content Include="WEB\Admin\login.html" />
     <Content Include="WEB\Admin\UserList.html" />
     <Content Include="WEB\ArticleList.html" />
     <Content Include="WEB\Category.html" />
@@ -226,6 +229,7 @@
     <Content Include="WEB\index.html" />
     <Content Include="WEB\jq\add.js" />
     <Content Include="WEB\jq\addarticle.js" />
+    <Content Include="WEB\jq\ARList.js" />
     <Content Include="WEB\jq\ArticleList1.js" />
     <Content Include="WEB\jq\ArticleList.js" />
     <Content Include="WEB\jq\Category.js" />
@@ -428,9 +432,17 @@
     <Content Include="WEB\ashx\CommentList.ashx" />
     <Content Include="WEB\ashx\UserList.ashx" />
     <Content Include="WEB\ashx\delUser.ashx" />
+    <Content Include="WEB\ashx\ARList.ashx" />
+    <Content Include="WEB\ashx\delAricle.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\DataConvertJson.cs" />
+    <Compile Include="WEB\ashx\ARList.ashx.cs">
+      <DependentUpon>ARList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\ashx\delAricle.ashx.cs">
+      <DependentUpon>delAricle.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WEB\ashx\delUser.ashx.cs">
       <DependentUpon>delUser.ashx</DependentUpon>
     </Compile>

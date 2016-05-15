@@ -7,11 +7,12 @@ namespace BBS.IDAL
 	/// </summary>
 	public interface IBBSTopic
 	{
-		#region  成员方法
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		int GetMaxId();
+        #region  成员方法
+        
+        /// <summary>
+        /// 得到最大ID
+        /// </summary>
+        int GetMaxId();
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>

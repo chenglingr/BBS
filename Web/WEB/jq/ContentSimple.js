@@ -42,7 +42,7 @@ $(document).ready(function () {
         $("#submitComment").click(function () {
             var tid = id; //获取文本框的值
             var title = $("#title1").val();
-            alert(title);
+           
             var content = $("#comment").val();
             $.ajax({
                 type: "Post",

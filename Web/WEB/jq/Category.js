@@ -26,7 +26,7 @@
                                   <h4 class="category"><a href="ArticleList.html?ID='
                                         + item.SID +
                                               '">'
-                                              + item.SName +
+                                              + item.SName + item.STopicCount +
                                       '</a></h4>\
                                   <div class="category-description">\
                                       <p>' + item.SStatement + '</p>\

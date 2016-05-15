@@ -24,11 +24,11 @@
                             '</a></h4>\
                               <span class="article-meta">'
                               + item.TTime +
-                              '  <a href="zuozhe?ID='
+                              '  <a href="ArticleList.html?UID='
                      + item.tuid +
                     '" title="作者 ">'
                             + item.Uname +
-                            '</a> <a href="ArticleList?ID='
+                            '</a> <a href="ArticleList.html?ID='
                      + item.tsid +
                     '" title="版块 ">'
                             + item.SName +
@@ -50,11 +50,11 @@
                             '</a></h4>\
                               <span class="article-meta">'
                               + item.TTime +
-                              '  <a href="zuozhe?ID='
+                              '  <a href="ArticleList.html?UID='
                      + item.tuid +
                     '" title="作者 ">'
                             + item.Uname +
-                            '</a> <a href="ArticleList?ID='
+                            '</a> <a href="ArticleList.html?ID='
                      + item.tsid +
                     '" title="版块 ">'
                             + item.SName +

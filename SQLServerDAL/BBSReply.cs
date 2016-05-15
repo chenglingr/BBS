@@ -92,7 +92,10 @@ namespace BBS.SQLServerDAL
 			}
 			else
 			{
-				return Convert.ToInt32(obj);
+                //更新帖子表里回复数
+                string sqlupdateReplyCount = string.Format("update BBSTopic set treplycount=treplycount+1 where tid={0}", model.RTID);
+                DbHelperSQL.ExecuteSql(sqlupdateReplyCount);//更新
+                return Convert.ToInt32(obj);
 			}
 		}
 

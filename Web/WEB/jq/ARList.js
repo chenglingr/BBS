@@ -1,9 +1,10 @@
 ﻿//Uid, Uname, UPassword, UEmail, UBirthday, Usex, UClass, UStatement, URegDate, UState, UPoint
 //在你要搜索的那一列加入data-sortable="true"，其他列data-sortable="false" 在前端使用bootstrap-table插件，实现按列搜索功能
 $(document).ready(function () {
-
+    
+  
     $('#table').bootstrapTable({
-        url: "../ashx/UserList.ashx",//数据源
+        url: "../ashx/ARList.ashx",//数据源
         sidePagination: 'server',//设置为服务器端分页
         pagination: true, //是否分页
         pageSize: 5,//每页的行数 
@@ -11,9 +12,18 @@ $(document).ready(function () {
         pageNumber: 1,//显示的页数
         showRefresh: true,
         striped: true,//条纹
+        queryParams: queryParams,
     });
+    //不写查询参数时 有默认的有：每页第一条数据的位置，每页的行数 两参数。要传别的
+    function queryParams(params) {
+        var ID = getUrlParam('ID');
+        return {
+            limit: params.limit, //每页数量
+            offset: params.offset,//偏移量
+            UID: ID //用户ID
+        };
 
-
+    }
 
     //删除按钮
     $("#BtnDel").click(function () {
@@ -28,7 +38,7 @@ $(document).ready(function () {
         {
             $.ajax({
                 type: "post",
-                url: "../ashx/delUser.ashx",
+                url: "../ashx/delAricle.ashx",
                 data: { "Action": "Del", "DelNums": DelNumS },
                 dataType: "text",
                 success: function (data) {
@@ -46,18 +56,9 @@ $(document).ready(function () {
 
 
 
-function SEXFormatter(value, row, index) { //处理性别的显示
-    if (value == 'True') {
-        value = '男';
-    }
-    else {
-        value = '女';
-    }
-    return value;
-}
 function editFormatter(value, row, index) { //处理操作
 
-    var str = '<a href="ARList.html?ID=' + value + '">详情</a>'
+    var str = '<a target="_blank" href="../ContentSimple.html?ID=' + value + '">详情</a>'
     value = str;
     return value;
 }
@@ -69,4 +70,10 @@ function getCheck() { //获取表格里选中的行 的编号
         data.push(val);
     });
     return data.join(",");//用，连接
+}
+
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return unescape(r[2]); return 0; //返回参数值
 }

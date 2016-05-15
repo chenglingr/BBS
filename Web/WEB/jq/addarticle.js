@@ -29,7 +29,7 @@ $(document).ready(function () {
         var txtContent = UM.getEditor('myEditor').getContent(); //获取文本框的值
         var section = jQuery("#section  option:selected").val();
         var title = $("#title").val();
-        alert(txtContent);
+        
         if (UM.getEditor('myEditor').hasContents()) {   //简单的验证放在客户端，减少服务器压力
             //利用post方式向服务器请求数据 
 
@@ -43,6 +43,7 @@ $(document).ready(function () {
                     //返回类型为text时 要处理一下 
                
                     alert(data.info);
+                    window.location.href = "../index.html";
                 },
                 error: function (err) {
                     alert(err);

@@ -97,7 +97,10 @@ namespace BBS.SQLServerDAL
 			}
 			else
 			{
-				return Convert.ToInt32(obj);
+                //更新版块表 帖子数
+                string sqlupdateTopicCount = string.Format("update BBSSection set STopicCount=STopicCount+1 where SID={0}", model.tsid);
+                DbHelperSQL.ExecuteSql(sqlupdateTopicCount);//更新
+                return Convert.ToInt32(obj);
 			}
 		}
 
@@ -196,13 +199,15 @@ namespace BBS.SQLServerDAL
 		/// </summary>
 		public BBS.Model.BBSTopic GetModel(int tid)
 		{
-			StringBuilder strSql=new StringBuilder();
+            string sqlupdateTClickCount =string.Format("update BBSTopic set TClickCount=TClickCount+1,TLastClickT='{0}' where tid={1}",DateTime.Now,tid);
+            StringBuilder strSql=new StringBuilder();
 			strSql.Append("select  top 1  ");
 			strSql.Append(" tid,tsid,tuid,treplycount,TTopic,TContents,TTime,TClickCount,TLastClickT ");
 			strSql.Append(" from BBSTopic ");
 			strSql.Append(" where tid="+tid+"" );
 			BBS.Model.BBSTopic model=new BBS.Model.BBSTopic();
 			DataSet ds=DbHelperSQL.Query(strSql.ToString());
+            DbHelperSQL.ExecuteSql(sqlupdateTClickCount);//更新点击量
 			if(ds.Tables[0].Rows.Count>0)
 			{
 				return DataRowToModel(ds.Tables[0].Rows[0]);
